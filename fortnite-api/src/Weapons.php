@@ -2,7 +2,7 @@
 
 class Fortnite_Weapons
 {
-	public function Fortnite_Weapons($client)
+	public function __construct($client)
 	{
 		$this->Client = $client;
 	}
