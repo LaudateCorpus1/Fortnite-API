@@ -2,7 +2,7 @@
 
 class Fortnite_User
 {
-	private $windows = ['alltime', 'season4'];
+	private $windows = ['alltime', 'season4', 'season5', 'season6', 'season7'];
 	public $uid = null;
 
 	public function __construct($client)
