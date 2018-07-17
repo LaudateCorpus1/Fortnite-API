@@ -5,7 +5,7 @@ class FortniteClient
 	private $client_version = 3.0;
 
 	private $api_endpoint = 'https://fortnite-public-api.theapinetwork.com/prod09/';
-	private $api_version = 'v1';
+	private $api_version = 'v1.1';
 
 	private $pem_path;
 	protected $ch;
