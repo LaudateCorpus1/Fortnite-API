@@ -82,16 +82,17 @@ class Fortnite_User
 	}
 
 	/*
-	 * Get the user stats.
+	 * Match tracking - We can only show cached matches that are cached by using stats(). The first time asking for user matches can take a while because we are calculating all matches.
 	 */
-	public function allstats($window = 'alltime', $minify = false) // minify the request (less data) to make te request faster.
+	public function matches($platform = 'pc', $window = 'alltime', $rows = 15)
 	{
 		(empty($user_id) && !empty($this->uid)) ? $user_id = $this->uid: '';
 		(!in_array($window, $this->windows)) ? $window = 'alltime' : '';
+		(!is_numeric($rows)) ? $rows = 15 : '';
 
-		if(!empty($user_id))
+		if(!empty($user_id) && !empty($platform) && !empty($rows))
 		{
-			$return = json_decode($this->Client->httpCall('users/public/br_stats_all', ['user_id' => $user_id, 'minify' => $minify, 'window' => $window]));
+			$return = json_decode($this->Client->httpCall('users/public/matches', ['user_id' => $user_id, 'platform' => $platform, 'window' => $window, 'rows' => $rows]));
 
 			if(isset($return->error))
 			{
