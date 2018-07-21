@@ -12,27 +12,29 @@ class FortniteClient
 
 	public $auth;
 	public $challenges;
-	public $leaderboard;
+	public $epicauth;
 	public $items;
+	public $leaderboard;
 	public $news;
 	public $patchnotes;
 	public $pve;
 	public $status;
-	public $weapons;
 	public $user;
+	public $weapons;
 
 	public function __construct()
 	{
 		$this->auth = new Fortnite_Auth($this);
 		$this->challenges = new Fortnite_Challenges($this);
-		$this->leaderboard = new Fortnite_Leaderboard($this);
+		$this->epicauth = new Fortnite_EpicAuth($this);
 		$this->items = new Fortnite_Items($this);
+		$this->leaderboard = new Fortnite_Leaderboard($this);
 		$this->news = new Fortnite_News($this);
 		$this->patchnotes = new Fortnite_PatchNotes($this);
 		$this->pve = new Fortnite_PVE($this);
 		$this->status = new Fortnite_Status($this);
-		$this->weapons = new Fortnite_Weapons($this);
 		$this->user = new Fortnite_User($this);
+		$this->weapons = new Fortnite_Weapons($this);
 
 		$this->pem_path = realpath(dirname(__FILE__) . '/cacert.pem');
 	}
