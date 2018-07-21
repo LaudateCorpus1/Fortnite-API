@@ -38,7 +38,7 @@ class Fortnite_EpicAuth
 	 * Epic Auth - get account details
 	 * Get the account id, username and email.
 	 */
-	public function createLogin($hash = '')
+	public function validate($hash = '')
 	{
 		if(!empty($hash))
 		{
