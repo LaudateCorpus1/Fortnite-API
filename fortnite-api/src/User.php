@@ -35,6 +35,28 @@ class Fortnite_User
 	}
 
 	/*
+	 * Get user devices - returns an array.
+	 */
+	public function getDevices($username = '')
+	{
+		if(!empty($username))
+		{
+			$return = json_decode($this->Client->httpCall('users/id', ['username' => urlencode($username)]));
+
+			if(isset($return->error))
+			{
+				return $return->errorMessage;
+			}
+			else
+			{
+				return $return->platforms;
+			}
+		}
+
+		return 'Invalid username.';
+	}
+
+	/*
 	 * Get username out of an user id (can be multiple in an array)
 	 */
 	public function getUsernameFromId($ids = null)
