@@ -17,7 +17,7 @@ class Fortnite_EpicAuth
 	{
 		if(!empty($returnurl) && filter_var($returnurl, FILTER_VALIDATE_URL))
 		{
-			$return = json_decode($this->Client->httpCall('epicauth/createlogin', ['epicauth' => urlencode($returnurl)]));
+			$return = json_decode($this->Client->httpCall('epicauth/createlogin', ['epicauth' => ($returnurl)]));
 
 			if(isset($return->error))
 			{
@@ -42,7 +42,7 @@ class Fortnite_EpicAuth
 	{
 		if(!empty($hash))
 		{
-			$return = json_decode($this->Client->httpCall('epicauth/validate', ['epicauth' => urlencode($hash)]));
+			$return = json_decode($this->Client->httpCall('epicauth/validate', ['epicauth' => ($hash)]));
 
 			if(isset($return->error))
 			{
