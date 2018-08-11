@@ -105,7 +105,6 @@ class Fortnite_User
 
 	/*
 	 * Match tracking - We can only show cached matches that are cached by using stats(). The first time asking for user matches can take a while because we are calculating all matches.
-	 * Please Notice: This function is in BETA. Don't trust this data, you can trust it after August 20st, 2018.
 	 */
 	public function matches($platform = 'pc', $window = 'alltime', $rows = 15)
 	{
