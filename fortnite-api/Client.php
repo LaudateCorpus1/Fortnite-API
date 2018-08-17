@@ -12,7 +12,6 @@ class FortniteClient
 
 	public $auth;
 	public $challenges;
-	public $epicauth;
 	public $items;
 	public $leaderboard;
 	public $news;
@@ -26,7 +25,6 @@ class FortniteClient
 	{
 		$this->auth = new Fortnite_Auth($this);
 		$this->challenges = new Fortnite_Challenges($this);
-		$this->epicauth = new Fortnite_EpicAuth($this);
 		$this->items = new Fortnite_Items($this);
 		$this->leaderboard = new Fortnite_Leaderboard($this);
 		$this->news = new Fortnite_News($this);
