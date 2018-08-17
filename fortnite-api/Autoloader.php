@@ -2,7 +2,6 @@
 
 require_once 'src/Auth.php';
 require_once 'src/Challenges.php';
-require_once 'src/EpicAuth.php';
 require_once 'src/Items.php';
 require_once 'src/Leaderboard.php';
 require_once 'src/News.php';
