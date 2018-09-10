@@ -27,7 +27,6 @@ $data = $api->user->id('username');
 
 echo $data->uid;
 echo $data->username;
-
 ?>
 ```
 
@@ -44,7 +43,6 @@ $api->user->uid = 'user_id';
 $data = $api->user->stats('console', 'window');
 
 var_dump($data);
-
 ?>
 ```
 
