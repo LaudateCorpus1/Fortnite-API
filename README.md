@@ -11,3 +11,69 @@ Have fun!
 
 Sam
 https://fortniteapi.com/
+
+
+# Examples
+
+1. Get an user id
+```
+<?php
+require_once 'fortnite-api/Autoloader.php';
+
+$api = new FortniteAPI;
+$api->setKey('your_key');
+
+$data = $api->user->id('username');
+
+echo $data->uid;
+echo $data->username;
+
+?>
+
+2. Get user stats
+```
+<?php
+require_once 'fortnite-api/Autoloader.php';
+
+$api = new FortniteAPI;
+$api->setKey('your_key');
+
+$api->user->uid = 'user_id';
+
+$data = $api->user->stats('console', 'window');
+
+var_dump($data);
+
+?>
+```
+
+3. Get the daily store
+```
+<?php
+require_once 'fortnite-api/Autoloader.php';
+
+$api = new FortniteAPI;
+$api->setKey('your_key');
+
+$data = $api->items->store();
+
+var_dump($data);
+?>
+
+```
+
+4. Fortnite server status
+```
+<?php
+require_once 'fortnite-api/Autoloader.php';
+
+$api = new FortniteAPI;
+$api->setKey('your_key');
+
+$data = $api->status->fetch();
+
+echo $data->status;
+echo $data->message;
+echo $data->version;
+?>
+```
