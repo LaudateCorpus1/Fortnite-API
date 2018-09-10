@@ -29,6 +29,7 @@ echo $data->uid;
 echo $data->username;
 
 ?>
+```
 
 2. Get user stats
 ```
