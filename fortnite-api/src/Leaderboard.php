@@ -10,7 +10,7 @@ class Fortnite_Leaderboard
 	}
 
 	/*
-	 * Top 50 most wins
+	 * Top 20.000.000 most wins, kills, score, or matches played.
 	 */
 	public function worldwide($users_per_page = 100, $offset = 0, $window = 'kills')
 	{
