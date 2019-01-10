@@ -51,7 +51,9 @@ class FortniteClient
 	{
 		if(empty($this->auth->auth))
 		{
-			FortniteClient::Exception('You have not set an API key. Use setKey() to set the API key.');
+			// API key is not needed anymore.
+			$this->auth->auth = '';
+			//FortniteClient::Exception('You have not set an API key. Use setKey() to set the API key.');
 		}
 
 		if(empty($this->ch) || !function_exists('curl_reset'))
