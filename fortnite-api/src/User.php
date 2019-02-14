@@ -88,7 +88,7 @@ class Fortnite_User
 
 		if(!empty($user_id) && !empty($platform))
 		{
-			$return = json_decode($this->Client->httpCall('users/public/br_stats', ['user_id' => $user_id, 'platform' => $platform, 'window' => $window]));
+			$return = json_decode($this->Client->httpCall('users/public/br_stats_v2', ['user_id' => $user_id, 'platform' => $platform, 'window' => $window]));
 
 			if(isset($return->error))
 			{
