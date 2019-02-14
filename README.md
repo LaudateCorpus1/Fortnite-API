@@ -1,5 +1,5 @@
 # FortniteAPI.com
-Fortnite API (get player stats, leaderboards and more)
+Fortnite API (get player stats **WITH STATS V2**, leaderboards and more)
 
 Hi,
 
@@ -21,7 +21,6 @@ https://fortniteapi.com/
 require_once 'fortnite-api/Autoloader.php';
 
 $api = new FortniteClient;
-$api->setKey('your_key');
 
 $data = $api->user->id('username');
 
@@ -30,13 +29,12 @@ echo $data->username;
 ?>
 ```
 
-2. Get user stats
+2. Get user stats **V2**
 ```
 <?php
 require_once 'fortnite-api/Autoloader.php';
 
 $api = new FortniteClient;
-$api->setKey('your_key');
 
 $api->user->uid = 'user_id';
 
@@ -52,7 +50,6 @@ var_dump($data);
 require_once 'fortnite-api/Autoloader.php';
 
 $api = new FortniteClient;
-$api->setKey('your_key');
 
 $data = $api->items->store();
 
@@ -67,7 +64,6 @@ var_dump($data);
 require_once 'fortnite-api/Autoloader.php';
 
 $api = new FortniteClient;
-$api->setKey('your_key');
 
 $data = $api->status->fetch();
 
